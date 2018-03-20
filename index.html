@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Employee Tracker</title>
+
+    <!-- Bootstrap
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" href="style.css">
+
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+   
+
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+
+    <!-- Moment.js Reference -->
+    <!-- <script src="http://momentjs.com/downloads/moment.js"></script>   -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Employee Tracker -->
+
+
+<!-- header -->
+      <!-- <div class="col s12 m2">
+        <p class="z-depth-5"><h1>Employee Data Management</h1></p>
+        <p class="z-depth-5"><h3>A Comprehensive Directory of Employee Billable Hours</h3></p>
+      </div> -->
+
+
+      <nav>
+        <div class="nav-wrapper green darken-4">
+          <p class="z-depth-5"><h3>Employee Data Management</h3></p>
+          <p class="z-depth-5"><h4>A Comprehensive Directory of Employee Billable Hours</h4></p>
+        </div>
+      </nav>
+
+      <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-12">
+
+        <!-- Current Employees-->
+          <div class="card">
+            <div class="card-heading">
+              <h3 class="card-title"><strong>Current Train Schedule</strong></h3>
+            </div>
+            <div class="card-body">
+              <table class="table table-hover" id='train-table'>
+                <thead>
+                  <tr>
+                    <th><h6>Train Name</h6></th>
+                    <th><h6>Destination</h6></th>
+                    <th><h6>Frequency (min)</h6></th>
+                    <th><h6>Next Arrival</h6></th>
+                    <th><h6>Minutes Away</h6></th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Add Employee  -->
+          <div class="card panel-primary">
+            <div class="card-heading">
+              <h3 class="card-title"><strong>Add Train</strong></h3>
+            </div>
+            <div class="card-body">
+
+              <!-- Entry Form -->
+              <form>
+                <div class="form-group">
+                  <label for="train-name-input"><h6>Train Name</h6></label>
+                  <input class="form-control" id="train-name-input" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="destination-input"><h6>Destination</h6></label>
+                  <input class="form-control" id="destination-input" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="first-train-time-input"><h6>First Train Time (HH:mm - Military Time)</h6></label>
+                  <input class="form-control" id="first-train-time-input" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="frequency-input"><h6>Frequency (min)</h6></label>
+                  <input class="form-control" id="frequency-input" type="text">
+                </div>
+                <button class="btn green darken-4" id="add-train-btn" type="submit">Submit</button>
+              </form>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="timesheetLogic.js"></script>
+
+  </body>
+
+</html>
